@@ -9,6 +9,14 @@ export const MENU_DATA: MenuCategory[] = [
     icon: 'new_releases',
     items: [
       {
+        id: 'cappuccino-cacao',
+        name: 'Cappuccino Cacao',
+        description: 'Cremoso cappuccino con una fina lluvia de cacao puro espolvoreado. El equilibrio perfecto entre energía y dulzura.',
+        imageUrl: '/img/cappuccino-cacao.webp',
+        isNew: true,
+        prices: [{ value: 3.00 }]
+      },
+      {
         id: 'latte-pistacho',
         name: 'Latte Pistacho',
         description: 'Café latte con crema suave de pistacho. Dulce, cremoso y sorprendente.',
