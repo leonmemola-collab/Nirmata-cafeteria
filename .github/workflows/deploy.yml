@@ -1,4 +1,4 @@
-name: Deploy to Hostinger
+name: Deploy to Hostinger (SFTP)
 
 on:
   push:
@@ -25,12 +25,14 @@ jobs:
       - name: 🛠️ Build project
         run: npm run build
 
-      - name: 🚀 Deploy to Hostinger
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      - name: 🚀 Deploy to Hostinger via SFTP
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
-          server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
+          server: ${{ secrets.FTP_SERVER }}
           password: ${{ secrets.FTP_PASSWORD }}
           port: ${{ secrets.FTP_PORT }}
-          local-dir: ./dist/
-          server-dir: ./public_html/
+          local_path: './dist/*'
+          remote_path: '/home/${{ secrets.FTP_USERNAME }}/public_html/'
+          sftp_only: true
+          delete_remote_files: false
