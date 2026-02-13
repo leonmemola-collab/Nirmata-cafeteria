@@ -1,0 +1,340 @@
+/* CSS Variables & Reset */
+:root {
+    --bg-cream: #F6F1E8;
+    --text-primary: #2B1E16;
+    --text-secondary: #6B5A50;
+    --accent: #B57A4A;
+    --divider: #E6DCCE;
+
+    --serif: 'Playfair Display', serif;
+    --sans: 'Inter', sans-serif;
+
+    --spacing-xs: 8px;
+    --spacing-sm: 16px;
+    --spacing-md: 24px;
+    --spacing-lg: 32px;
+    --spacing-xl: 48px;
+
+    --radius-card: 16px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    background-color: var(--bg-cream);
+    color: var(--text-primary);
+    font-family: var(--sans);
+    line-height: 1.5;
+    overflow-x: hidden;
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: inherit;
+}
+
+/* Mobile Container */
+.mobile-container {
+    max-width: 480px;
+    margin: 0 auto;
+    min-height: 100vh;
+    background: var(--bg-cream);
+    position: relative;
+    padding-bottom: 80px;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.05);
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+.serif {
+    font-family: var(--serif);
+    font-weight: 400;
+}
+
+.text-secondary {
+    color: var(--text-secondary);
+}
+
+.text-accent {
+    color: var(--accent);
+}
+
+/* Header */
+.app-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--bg-cream);
+    transition: transform 0.3s;
+}
+
+/* Center within the mobile constraint if on desktop */
+@media (min-width: 481px) {
+    .app-header {
+        left: 50%;
+        transform: translateX(-50%);
+        max-width: 480px;
+    }
+}
+
+.logo {
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+.menu-btn {
+    position: absolute;
+    right: 20px;
+    padding: 10px;
+}
+
+.menu-icon span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--text-primary);
+    margin: 6px 0;
+}
+
+.back-btn {
+    position: absolute;
+    left: 20px;
+    padding: 10px;
+}
+
+/* Fullscreen Menu */
+.fullscreen-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: var(--bg-cream);
+    z-index: 200;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+}
+
+.fullscreen-menu.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.close-menu {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    font-size: 32px;
+}
+
+.nav-links li {
+    margin: 30px 0;
+    text-align: center;
+}
+
+.nav-links a {
+    font-family: var(--serif);
+    font-size: 32px;
+    color: var(--text-primary);
+}
+
+/* Components */
+.cover-img {
+    width: 100%;
+    aspect-ratio: 4/5;
+    object-fit: cover;
+    background: var(--divider);
+    display: block;
+}
+
+.hero {
+    margin-top: 70px;
+    position: relative;
+    margin-bottom: var(--spacing-xl);
+    background-color: var(--divider);
+    /* Fallback color for gaps */
+}
+
+.hero .cover-img {
+    height: auto;
+    object-fit: contain;
+}
+
+.hero-text {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: #fff;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: var(--spacing-lg);
+}
+
+/* Cards */
+.card-grid {
+    display: grid;
+    gap: var(--spacing-lg);
+    padding: 0 var(--spacing-md);
+}
+
+.product-card {
+    display: block;
+}
+
+.product-card .img-wrapper {
+    width: 100%;
+    aspect-ratio: 4/5;
+    border-radius: var(--radius-card);
+    overflow: hidden;
+    margin-bottom: var(--spacing-sm);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.product-card h3 {
+    font-size: 18px;
+    margin-bottom: 4px;
+}
+
+/* Category Cards (Home) */
+.category-card {
+    position: relative;
+    border-radius: var(--radius-card);
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.category-card img {
+    width: 100%;
+    aspect-ratio: 4/5;
+    object-fit: cover;
+}
+
+/* Testimonials */
+.testimonials {
+    padding: var(--spacing-xl) var(--spacing-md);
+    text-align: center;
+    background: rgba(255, 255, 255, 0.4);
+    margin: var(--spacing-xl) 0;
+}
+
+.testimonial {
+    margin-bottom: var(--spacing-lg);
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 20px;
+    color: var(--text-secondary);
+}
+
+/* Product Detail */
+.product-detail {
+    padding-top: 70px;
+}
+
+.detail-img {
+    width: 100%;
+    aspect-ratio: 4/5;
+    object-fit: cover;
+}
+
+.detail-content {
+    padding: var(--spacing-lg) var(--spacing-md);
+}
+
+.detail-title {
+    font-size: 32px;
+    margin-bottom: var(--spacing-xs);
+}
+
+.detail-desc {
+    font-size: 16px;
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-lg);
+    line-height: 1.6;
+}
+
+.price-list {
+    margin-bottom: var(--spacing-lg);
+    border-top: 1px solid var(--divider);
+}
+
+.price-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--divider);
+    font-weight: 500;
+}
+
+.extras-section h4 {
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-secondary);
+}
+
+.extra-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+/* Animations */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Categories Page */
+.category-header {
+    padding: 120px var(--spacing-md) var(--spacing-lg);
+    text-align: center;
+}
+
+.category-header h1 {
+    font-size: 36px;
+}

@@ -1,0 +1,36 @@
+/* Global styles for Nirmata Specialty Coffee */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary: #B26E32;
+    --primary-dark: #8E5828;
+    --warm-bg: #FFFFFF;
+    --coffee-dark: #222222;
+    --coffee-muted: #666666;
+    --matte-black: #1A1A1A;
+    --beige-light: #F5F5F5;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Add any custom animations or global utility classes here */
+.animate-fade-in {
+    animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

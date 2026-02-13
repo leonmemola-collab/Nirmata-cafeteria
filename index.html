@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nirmata Specialty Coffee - Carta Digital</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              primary: "#B26E32", // Marrón café tostado
+              "primary-dark": "#8E5828",
+              "warm-bg": "#FFFFFF", // Fondo blanco limpio
+              "coffee-dark": "#222222", // Texto principal gris oscuro/negro
+              "coffee-muted": "#666666", // Texto secundario
+              "matte-black": "#1A1A1A", // Contrastes negro mate
+              "beige-light": "#F5F5F5", // Tonos cálidos suaves
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              logo: ["Quicksand", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .hide-scrollbar::-webkit-scrollbar { display: none; }
+      .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+      html { scroll-behavior: smooth; }
+      body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+      /* Transición suave para el cambio de tema */
+      .theme-transition {
+        transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, shadow 0.3s ease;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-warm-bg dark:bg-[#121212] text-coffee-dark dark:text-white font-sans theme-transition">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

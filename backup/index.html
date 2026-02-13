@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Nirmata - Specialty Coffee</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>☕</text></svg>">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="app-header">
+        <div class="logo serif">Nirmata</div>
+        <button id="menu-btn" class="menu-btn" aria-label="Menu">
+            <div class="menu-icon">
+                <span></span>
+                <span></span>
+            </div>
+        </button>
+    </header>
+
+    <!-- Fullscreen Menu -->
+    <div id="fullscreen-menu" class="fullscreen-menu">
+        <button id="close-menu" class="close-menu" aria-label="Close">&times;</button>
+        <div class="serif logo" style="margin-bottom: 40px; font-size: 32px;">Nirmata</div>
+        <ul id="nav-links" class="nav-links">
+            <!-- Populated by JS -->
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <main class="mobile-container">
+
+        <!-- Hero -->
+        <section class="hero fade-in visible">
+            <img src="/img/carta nirmata 1.jpeg" alt="Barista pouring coffee" class="cover-img"
+                style="background-color: #E6DCCE;">
+            <div class="hero-text">
+                <p>Specialty coffee, hecho con calma.</p>
+            </div>
+        </section>
+
+        <!-- Featured -->
+        <section class="section">
+            <h2 class="section-title fade-in">Destacados</h2>
+            <div id="featured-list" class="card-grid">
+                <!-- Randomized Featured Products -->
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials fade-in">
+            <div class="testimonial">
+                “El mejor café que he probado en mucho tiempo.”
+            </div>
+            <div class="testimonial">
+                “Se nota el cuidado en cada taza.”
+            </div>
+            <div class="testimonial">
+                “Volvería cada mañana.”
+            </div>
+        </section>
+
+        <!-- Categories -->
+        <section class="section" style="padding-bottom: 40px;">
+            <h2 class="section-title fade-in">Categorías</h2>
+            <div id="category-list" class="card-grid">
+                <!-- Categories from JSON -->
+            </div>
+        </section>
+
+    </main>
+
+    <script type="module" src="/js/app.js"></script>
+</body>
+
+</html>
