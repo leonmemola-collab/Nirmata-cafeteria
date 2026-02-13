@@ -2,19 +2,15 @@
 <img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
 </div>
 
-# Run and deploy your AI Studio app
+# Cafetería Nirmata ☕
 
-This contains everything you need to run your app locally.
+Web oficial de la Cafetería Nirmata.
 
-View your app in AI Studio: https://ai.studio/apps/drive/1oYo7bLHiidf8IO6c9sj9jjrSArlwY3pO
+## 🚀 Despliegue Automático
+Este proyecto está configurado para desplegarse automáticamente en Hostinger cada vez que se suben cambios a la rama `main`.
 
-## Run Locally
+## 🛠️ Desarrollo Local
 
-**Prerequisites:**  Node.js
-
-
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+1. Instalar dependencias: `npm install`
+2. Ejecutar Servidor: `npm run dev`
+3. Construcción: `npm run build`
